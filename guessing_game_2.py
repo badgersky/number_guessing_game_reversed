@@ -3,10 +3,10 @@ from random import randint
 
 def get_answer(number):
     """Function takes player`s answer"""
-    available_answers = ('to big', 'to small', 'you win')
+    available_answers = ('too big', 'too small', 'you win')
     print(f'My guess is {number}.')
     while True:
-        answer = input('Enter your answer (to big/to small/you win): ')
+        answer = input('Enter your answer (too big/too small/you win): ')
         if answer.lower() in available_answers:
             return answer
         else:
@@ -24,10 +24,10 @@ def game_loop():
     while tries < available_tries:
         tries += 1
         p_answer = get_answer(pc_number)
-        if p_answer == 'to big':
+        if p_answer == 'too big':
             mx_num = pc_number
             pc_number = randint(mi_num, mx_num)
-        elif p_answer == 'to small':
+        elif p_answer == 'too small':
             mi_num = pc_number
             pc_number = randint(mi_num, mx_num)
         elif p_answer == 'you win':
