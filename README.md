@@ -1,4 +1,4 @@
-# number_guessing_game_2
+# number_guessing_game_reversed
 In this game computer tries to guess number you choose.
 Computer will have 10 tries to guess number in range 0-1000.
 
